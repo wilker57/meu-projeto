@@ -21,15 +21,11 @@ body {
 
 /* Estilo da foto de perfil */
 .profile-picture img {
-    display: inline-block;
-    margin: 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.profile-picture h1 {
-    font-size: 1.8rem;
-    color: #58a6ff;
-    font-weight: bold;
-    margin-top: 1rem;
+.profile-picture img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #58a6ff;
 }
 
 /* Geral das seções */
@@ -42,24 +38,16 @@ section {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #1a1d23;
-    color: #58a6ff;
+    background: #111;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    color: #aaa;
 }
-
-.social-icons a {
+footer .social-icons a {
+    color: #aaa;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+footer .social-icons a:hover {
     color: #58a6ff;
-    font-size: 1.5rem;
-    margin: 0 5px;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-icons a:hover {
-    color: #c9d1d9;
-    transform: scale(1.1);
 }
